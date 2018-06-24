@@ -10,14 +10,25 @@ GO
 -- Create date: <15/03/2018>
 -- Description:	<To Get Details of All Clients>
 -- Execute: EXEC stp_GetClientDetails
+-- MenuTag: 0-View, 1-Insert, 2-Update, 3-Delete
 -- =============================================
 CREATE PROCEDURE [dbo].[stp_GetClientDetails]
+(
+	@CientID Varchar(30) = NULL,
+	@ClientName VARCHAR (100) = NULL,
+	@ClientAddress VARCHAR(500) = NULL,
+	@ClientContact INT = NULL,
+	@ClientGST VARCHAR(20) = NULL,
+	@ClientPAN VARCHAR(10) = NULL,
+	@ClientRemarks VARCHAR(100) = NULL,
+	@MenuTag Varchar(10)
+)
 	
 AS
 SET NOCOUNT ON;
 BEGIN
 
-
+IF @MenuTag = 0
 		SELECT 
 		MC.clientId AS ClientID, 
 		MC.clientName AS ClientName,
@@ -28,5 +39,17 @@ BEGIN
 		MC.clientRemarks AS ClientRemarks
 		FROM Clients MC
 
+ELSE IF @MenuTag = 1
+		INSERT INTO Clients
+		VALUES (@ClientName, @ClientAddress, @ClientContact, @ClientGST, @ClientPAN, @ClientRemarks)
+
+ELSE IF @MenuTag = 2
+		UPDATE Clients
+		SET clientName = @ClientName, ClientAddress = @ClientAddress, ClientContact = @ClientContact, ClientGST = @ClientGST, ClientPAN = @ClientPAN, ClientRemarks = @ClientRemarks
+		WHERE clientId = @CientID
+
+ELSE IF @MenuTag = 3
+		DELETE FROM Clients
+		WHERE clientId = @CientID
 END
 GO
