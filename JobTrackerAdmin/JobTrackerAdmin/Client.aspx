@@ -6,10 +6,12 @@
                             
                 <thead>
                 <tr>
-                  <th class="auto-style1">User ID</th>
-                  <th class="auto-style1">Password</th>
-                  <th class="auto-style1">User Type</th>
-                  <th class="auto-style1">Name</th>
+                  <th class="auto-style1" >Client Name</a></th>
+                  <th class="auto-style1">Address</th>
+                  <th class="auto-style1">Contact</th>
+                  <th class="auto-style1">GST</th>
+                    <th class="auto-style1">PAN</th>
+                  <th class="auto-style1">Remarks</th>
                   <%--<th>Dummy</th>--%>
                 </tr>
                 </thead>
