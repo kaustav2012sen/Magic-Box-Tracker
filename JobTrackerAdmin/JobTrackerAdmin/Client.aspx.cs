@@ -5,20 +5,20 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using JobTrackerAdmin.DAL;
+using JobTrackerAdmin.Facade;
 using System.Text;
 
 namespace JobTrackerAdmin
 {
     public partial class WebForm3 : System.Web.UI.Page
     {
-        ClientData cd = new ClientData();
+        AdminFacade _adminfacade = new AdminFacade();
         StringBuilder htmlTable = new StringBuilder();
         DataTable dt = new DataTable();
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            dt = cd.GetAllClients();
+            dt = _adminfacade.GetAllClientDetails();
             ClientDetailView();
            
         }
