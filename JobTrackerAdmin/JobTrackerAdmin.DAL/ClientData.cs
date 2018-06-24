@@ -18,10 +18,19 @@ namespace JobTrackerAdmin.DAL
             SqlDataAdapter da = new SqlDataAdapter();
             SqlCommand cmd = new SqlCommand("stp_GetClientDetails", con);
             cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@ClientID", SqlDbType.BigInt).Value = 0;
+            cmd.Parameters.Add("@ClientName", SqlDbType.VarChar).Value = "";
+            cmd.Parameters.Add("@ClientAddress", SqlDbType.VarChar).Value = "";
+            cmd.Parameters.Add("@ClientContact", SqlDbType.Float).Value = 0.0;
+            cmd.Parameters.Add("@ClientGST", SqlDbType.VarChar).Value = "";
+            cmd.Parameters.Add("@ClientPAN", SqlDbType.VarChar).Value = "";
+            cmd.Parameters.Add("@ClientRemarks", SqlDbType.VarChar).Value = "";
+            cmd.Parameters.Add("@MenuTag", SqlDbType.BigInt).Value = 0;
+
             da.SelectCommand = cmd;
             da.Fill(dt);
             con.Close();
-            return dt;
+            return dt; 
         }
     }
 }

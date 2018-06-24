@@ -9,19 +9,19 @@ GO
 -- Author:		<Kaustav Sen>
 -- Create date: <15/03/2018>
 -- Description:	<To Get Details of All Clients>
--- Execute: EXEC stp_GetClientDetails
+-- Execute: EXEC stp_GetClientDetails 1,'Rahul Das Naskar','',9831214339,'','','',0
 -- MenuTag: 0-View, 1-Insert, 2-Update, 3-Delete
 -- =============================================
 CREATE PROCEDURE [dbo].[stp_GetClientDetails]
 (
-	@CientID Varchar(30) = NULL,
+	@ClientID INT = 0,
 	@ClientName VARCHAR (100) = NULL,
 	@ClientAddress VARCHAR(500) = NULL,
-	@ClientContact INT = NULL,
+	@ClientContact FLOAT = 0.0,
 	@ClientGST VARCHAR(20) = NULL,
 	@ClientPAN VARCHAR(10) = NULL,
 	@ClientRemarks VARCHAR(100) = NULL,
-	@MenuTag Varchar(10)
+	@MenuTag INT=0
 )
 	
 AS
@@ -46,10 +46,10 @@ ELSE IF @MenuTag = 1
 ELSE IF @MenuTag = 2
 		UPDATE Clients
 		SET clientName = @ClientName, ClientAddress = @ClientAddress, ClientContact = @ClientContact, ClientGST = @ClientGST, ClientPAN = @ClientPAN, ClientRemarks = @ClientRemarks
-		WHERE clientId = @CientID
+		WHERE clientId = @ClientID
 
 ELSE IF @MenuTag = 3
 		DELETE FROM Clients
-		WHERE clientId = @CientID
+		WHERE clientId = @ClientID
 END
 GO
