@@ -90,12 +90,12 @@
 							<a href="#Pages1" data-toggle="collapse" class="collapsed"><i class="lnr lnr-cog"></i> <span>Master
 							</span><i class="icon-submenu lnr lnr-chevron-left"></i></a>
 							<div id="Pages1" class="collapse ">
-								<ul class="nav">
-									<li><a href="Vendor.aspx" class="">Vendor</a></li>
-									<li><a href="#" class="">Client</a></li>
-									<li><a href="#" class="">Academic Details</a></li>
-									<li><a href="#" class="">Student Details</a></li>
-									<li><a href="#" class="">Employee Details</a></li>
+								<ul class="nav">                                    
+									<li><a href="Client.aspx" class="">Client Master</a></li>
+									<li><a href="Vendor.aspx" class="">Vendor Master</a></li>
+									<li><a href="Paper.aspx" class="">Paper Master</a></li>
+									<li><a href="Media.aspx" class="">Media Master</a></li>
+									<li><a href="Ink.aspx" class="">Ink Master</a></li>
 									<li><a href="#" class="">Course Details</a></li>
 									<li><a href="#" class="">Fees Allocation Details</a></li>
 								</ul>

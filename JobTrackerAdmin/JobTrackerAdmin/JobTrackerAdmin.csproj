@@ -65,6 +65,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Client.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Ink.aspx" />
+    <Content Include="Media.aspx" />
+    <Content Include="Overview.aspx" />
     <Content Include="packages.config" />
     <Content Include="assets\css\demo.css.map" />
     <Content Include="assets\css\main.css.map" />
@@ -145,14 +150,27 @@
     <Content Include="assets\vendor\toastr\toastr.js" />
     <Content Include="assets\vendor\toastr\toastr.min.css" />
     <Content Include="assets\vendor\toastr\toastr.min.js" />
-    <Content Include="Global.asax" />
-    <Content Include="Web.config" />
-    <Content Include="Overview.aspx" />
+    <Content Include="Paper.aspx" />
     <Content Include="Vendor.aspx" />
+    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Client.aspx.cs">
+      <DependentUpon>Client.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Client.aspx.designer.cs">
+      <DependentUpon>Client.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Ink.aspx.cs">
+      <DependentUpon>Ink.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ink.aspx.designer.cs">
+      <DependentUpon>Ink.aspx</DependentUpon>
     </Compile>
     <Compile Include="MasterPage1.Master.cs">
       <DependentUpon>MasterPage1.Master</DependentUpon>
@@ -161,7 +179,13 @@
     <Compile Include="MasterPage1.Master.designer.cs">
       <DependentUpon>MasterPage1.Master</DependentUpon>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Media.aspx.cs">
+      <DependentUpon>Media.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Media.aspx.designer.cs">
+      <DependentUpon>Media.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Overview.aspx.cs">
       <DependentUpon>Overview.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -169,6 +193,14 @@
     <Compile Include="Overview.aspx.designer.cs">
       <DependentUpon>Overview.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Paper.aspx.cs">
+      <DependentUpon>Paper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Paper.aspx.designer.cs">
+      <DependentUpon>Paper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Vendor.aspx.cs">
       <DependentUpon>Vendor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
