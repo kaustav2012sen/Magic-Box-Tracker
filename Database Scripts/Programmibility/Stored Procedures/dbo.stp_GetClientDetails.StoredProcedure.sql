@@ -29,6 +29,7 @@ SET NOCOUNT ON;
 BEGIN
 
 IF @MenuTag = 0
+BEGIN
 		SELECT 
 		MC.clientId AS ClientID, 
 		MC.clientName AS ClientName,
@@ -38,18 +39,28 @@ IF @MenuTag = 0
 		MC.clientPAN AS ClientPAN,
 		MC.clientRemarks AS ClientRemarks
 		FROM Clients MC
+END
 
 ELSE IF @MenuTag = 1
+BEGIN
 		INSERT INTO Clients
 		VALUES (@ClientName, @ClientAddress, @ClientContact, @ClientGST, @ClientPAN, @ClientRemarks)
 
+		SET @ClientID = SCOPE_IDENTITY()
+		SELECT @ClientID AS ClientID
+END
+
 ELSE IF @MenuTag = 2
+BEGIN
 		UPDATE Clients
 		SET clientName = @ClientName, ClientAddress = @ClientAddress, ClientContact = @ClientContact, ClientGST = @ClientGST, ClientPAN = @ClientPAN, ClientRemarks = @ClientRemarks
 		WHERE clientId = @ClientID
+END
 
 ELSE IF @MenuTag = 3
+BEGIN
 		DELETE FROM Clients
 		WHERE clientId = @ClientID
+END
 END
 GO

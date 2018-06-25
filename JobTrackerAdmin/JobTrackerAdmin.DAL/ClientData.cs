@@ -32,5 +32,8 @@ namespace JobTrackerAdmin.DAL
             con.Close();
             return dt; 
         }
+
+        
+
     }
 }
