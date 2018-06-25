@@ -29,7 +29,7 @@
 		<!-- NAVBAR -->
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="brand">
-				<a href="index.html"><img src="assets/img/logo-dark.png" alt="Klorofil Logo" class="img-responsive logo"></a>
+				<a href="#"><img src="assets/img/logo-dark.png" alt="Klorofil Logo" class="img-responsive logo"></a>
 			</div>
 			<div class="container-fluid">
 				<div class="navbar-btn">
@@ -96,49 +96,52 @@
 									<li><a href="Paper.aspx" class="">Paper Master</a></li>
 									<li><a href="Media.aspx" class="">Media Master</a></li>
 									<li><a href="Ink.aspx" class="">Ink Master</a></li>
-									<li><a href="#" class="">Course Details</a></li>
-									<li><a href="#" class="">Fees Allocation Details</a></li>
 								</ul>
 							</div>
 						</li>
 						<li>
-							<a href="#Pages2" data-toggle="collapse" class="collapsed"><i class="fa fa-child"></i> <span>Student
-							</span><i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<a href="#Pages2" data-toggle="collapse" class="collapsed"><i class="fa fa-child"></i> <span>Production Jobs</span><i class="icon-submenu lnr lnr-chevron-left"></i></a>
 							<div id="Pages2" class="collapse ">
 								<ul class="nav">
-									<li><a href="#" class="">Grade Book</a></li>
-									<li><a href="#" class="">Attendance Record</a></li>
-									<li><a href="#" class="">Homework Manager</a></li>
-									<li><a href="#" class="">Online Test</a></li>
-									<li><a href="#" class="">Examination Scheduler</a></li>
+									<li><a href="#" class="">Digital Jobs Entry</a></li>
+									<li><a href="#" class="">Eco Solvent Jobs Entry</a></li>
+									<li><a href="#" class="">Solvent Jobs Entry</a></li>
 								</ul>
 							</div>
 						</li>
 						<li>
-							<a href="#Pages3" data-toggle="collapse" class="collapsed"><i class="fa fa-graduation-cap"></i> <span>Teacher
-							</span><i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<a href="#Pages3" data-toggle="collapse" class="collapsed"><i class="fa fa-graduation-cap"></i> <span>Sales Orders</span><i class="icon-submenu lnr lnr-chevron-left"></i></a>
 							<div id="Pages3" class="collapse ">
 								<ul class="nav">
-									<li><a href="#" class="">Grade Book</a></li>
-									<li><a href="#" class="">Attendance Record</a></li>
-									<li><a href="#" class="">Homework Manager</a></li>
-									<li><a href="#" class="">Online Test</a></li>
-									<li><a href="#" class="">Examination Scheduler</a></li>
-									<li><a href="#" class="">Report Messaging</a></li>
+									<li><a href="#" class="">Sales Order Entry</a></li>
+									<li><a href="#" class="">Completed Sales Order</a></li>
+									<li><a href="#" class="">Pending Sales Order</a></li>
 								</ul>
 							</div></li>
 							<li>
-							<a href="#Pages4" data-toggle="collapse" class="collapsed"><i class="fa fa-truck"></i> <span>Transport</span><i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<a href="#Pages4" data-toggle="collapse" class="collapsed"><i class="fa fa-truck"></i> <span>Billings</span><i class="icon-submenu lnr lnr-chevron-left"></i></a>
 							<div id="Pages4" class="collapse ">
 								<ul class="nav">
-									<li><a href="#" class="">Vehicle Record</a></li>
-									<li><a href="#" class="">Crew Record</a></li>
-									<li><a href="#" class="">Route Manager</a></li>
-									<li><a href="#" class="">Track Vehicle</a></li>
-									<li><a href="#" class="">Pupil Manager</a></li>
-									<li><a href="#" class="">Report Messaging</a></li>
+									<li><a href="#" class="">Rate Entry</a></li>
+									<li><a href="#" class="">Bill Generate</a></li>
+									<li><a href="#" class="">Pending Bills</a></li>
+									<li><a href="#" class="">Payment Receive</a></li>
 								</ul>
-							</div></li>
+							</div>
+							</li>
+                        <li>
+							<a href="#Pages5" data-toggle="collapse" class="collapsed"><i class="fa fa-truck"></i> <span>Reporting</span><i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<div id="Pages5" class="collapse ">
+								<ul class="nav">
+									<li><a href="#" class="">Sales Report</a></li>
+									<li><a href="#" class="">Bill Report</a></li>
+									<li><a href="#" class="">Credit Report</a></li>
+									<li><a href="#" class="">Payment Report</a></li>
+									<li><a href="#" class="">Production Report</a></li>
+
+								</ul>
+							</div>
+							</li>
 						<li><a href="notifications.html" class=""><i class="lnr lnr-alarm"></i> <span>Notifications</span></a></li>
 						
 						

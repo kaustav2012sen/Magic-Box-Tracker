@@ -29,5 +29,15 @@ namespace JobTrackerAdmin.Facade
         }
 
         #endregion
+
+        #region Paper
+        PaperData paperData = new PaperData();
+
+        public DataTable GetAllPaperDetails()
+        {
+            return paperData.GetAllPapers();
+        }
+
+        #endregion
     }
 }
