@@ -20,5 +20,14 @@ namespace JobTrackerAdmin.Facade
 
         #endregion
 
+        #region Vendor
+        VendorData vendorData = new VendorData();
+
+        public DataTable GetAllVendorDetails()
+        {
+            return vendorData.GetAllVendors();
+        }
+
+        #endregion
     }
 }

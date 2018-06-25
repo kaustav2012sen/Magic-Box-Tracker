@@ -23,6 +23,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -92,6 +93,7 @@
     <Content Include="assets\vendor\linearicons\fonts\Linearicons-Free.woff" />
     <Content Include="assets\vendor\linearicons\fonts\Linearicons-Free.woff2" />
     <Content Include="MasterPage1.Master" />
+    <Content Include="ClientAddEdit.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -209,6 +211,13 @@
     </Compile>
     <Compile Include="Vendor.aspx.designer.cs">
       <DependentUpon>Vendor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ClientAddEdit.aspx.cs">
+      <DependentUpon>ClientAddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ClientAddEdit.aspx.designer.cs">
+      <DependentUpon>ClientAddEdit.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
