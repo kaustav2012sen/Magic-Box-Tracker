@@ -10,7 +10,7 @@ namespace JobTrackerAdmin.DAL
 {
     public class ClientData
     {
-        public DataTable GetAllClients()
+        public DataTable GetAllClients()  //To Retreive all the Data of the Clients
         {
             DataTable dt = new DataTable();
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["connect"].ToString());

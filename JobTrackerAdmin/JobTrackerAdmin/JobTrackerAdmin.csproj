@@ -216,9 +216,9 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\JobTrackerAdmin.DAL\JobTrackerAdmin.DAL.csproj">
-      <Project>{dc4f17ef-fe5f-4ee7-801c-3b434f6a1759}</Project>
-      <Name>JobTrackerAdmin.DAL</Name>
+    <ProjectReference Include="..\JobTrackerAdmin.Facade\JobTrackerAdmin.Facade.csproj">
+      <Project>{5df6eca0-e19e-4268-b722-230f983761d7}</Project>
+      <Name>JobTrackerAdmin.Facade</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
