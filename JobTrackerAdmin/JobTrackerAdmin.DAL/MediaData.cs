@@ -19,9 +19,6 @@ namespace JobTrackerAdmin.DAL
             SqlDataAdapter da = new SqlDataAdapter();
             SqlCommand cmd = new SqlCommand("stp_GetMediaDetails", con);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("@MediaID", SqlDbType.BigInt).Value = 0;
-            cmd.Parameters.Add("@MediaType", SqlDbType.VarChar).Value = "";
-            cmd.Parameters.Add("@MediaRemarks", SqlDbType.VarChar).Value = "";
             cmd.Parameters.Add("@MenuTag", SqlDbType.BigInt).Value = 0;
 
             da.SelectCommand = cmd;

@@ -18,9 +18,6 @@ namespace JobTrackerAdmin.DAL
             SqlDataAdapter da = new SqlDataAdapter();
             SqlCommand cmd = new SqlCommand("stp_GetPaperDetails", con);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("@PaperID", SqlDbType.BigInt).Value = 0;
-            cmd.Parameters.Add("@PaperType", SqlDbType.VarChar).Value = "";
-            cmd.Parameters.Add("@PaperRemarks", SqlDbType.VarChar).Value = "";
             cmd.Parameters.Add("@MenuTag", SqlDbType.BigInt).Value = 0;
 
             da.SelectCommand = cmd;
