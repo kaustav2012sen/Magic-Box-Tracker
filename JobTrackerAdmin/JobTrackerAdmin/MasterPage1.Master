@@ -95,7 +95,6 @@
 									<li><a href="Vendor.aspx" class="">Vendor Master</a></li>
 									<li><a href="Paper.aspx" class="">Paper Master</a></li>
 									<li><a href="Media.aspx" class="">Media Master</a></li>
-									<li><a href="Ink.aspx" class="">Ink Master</a></li>
 								</ul>
 							</div>
 						</li>
@@ -103,7 +102,7 @@
 							<a href="#Pages2" data-toggle="collapse" class="collapsed"><i class="fa fa-child"></i> <span>Production Jobs</span><i class="icon-submenu lnr lnr-chevron-left"></i></a>
 							<div id="Pages2" class="collapse ">
 								<ul class="nav">
-									<li><a href="#" class="">Digital Jobs Entry</a></li>
+									<li><a href="DigitalJobCardEntry.aspx" class="">Digital Jobs Entry</a></li>
 									<li><a href="#" class="">Eco Solvent Jobs Entry</a></li>
 									<li><a href="#" class="">Solvent Jobs Entry</a></li>
 								</ul>
@@ -182,6 +181,7 @@
 	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
 	<script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 	<script src="assets/scripts/klorofil-common.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 		
 	</form>
 </body>

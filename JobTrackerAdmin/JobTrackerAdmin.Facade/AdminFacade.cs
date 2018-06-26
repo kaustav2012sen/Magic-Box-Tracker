@@ -39,5 +39,16 @@ namespace JobTrackerAdmin.Facade
         }
 
         #endregion
+
+        #region Media
+        MediaData MediaData = new MediaData();
+
+        public DataTable GetAllMediaDetails()
+        {
+            return MediaData.GetAllMedias();
+        }
+
+        #endregion
+
     }
 }
