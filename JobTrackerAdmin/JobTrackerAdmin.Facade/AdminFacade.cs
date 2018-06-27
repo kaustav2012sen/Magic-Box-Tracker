@@ -18,6 +18,41 @@ namespace JobTrackerAdmin.Facade
             return clientData.GetAllClients();
         }
 
+        public int SaveClientData(string ClientName, string ClientAddress, double ClientContact, string ClientGST, string ClientPAN, string ClientRemarks)
+        {
+            return clientData.SaveClientDetails(ClientName, ClientAddress, ClientContact, ClientGST, ClientPAN, ClientRemarks);
+        }
+
+        #endregion
+
+        #region Vendor
+        VendorData vendorData = new VendorData();
+
+        public DataTable GetAllVendorDetails()
+        {
+            return vendorData.GetAllVendors();
+        }
+
+        #endregion
+
+        #region Paper
+        PaperData paperData = new PaperData();
+
+        public DataTable GetAllPaperDetails()
+        {
+            return paperData.GetAllPapers();
+        }
+
+        #endregion
+
+        #region Media
+        MediaData MediaData = new MediaData();
+
+        public DataTable GetAllMediaDetails()
+        {
+            return MediaData.GetAllMedias();
+        }
+
         #endregion
 
     }

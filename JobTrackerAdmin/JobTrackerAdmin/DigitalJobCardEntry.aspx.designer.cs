@@ -10,7 +10,7 @@
 namespace JobTrackerAdmin {
     
     
-    public partial class WebForm5 {
+    public partial class WebForm11 {
         
         /// <summary>
         /// DbDataPlaceholder control.

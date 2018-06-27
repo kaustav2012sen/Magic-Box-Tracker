@@ -10,15 +10,15 @@
 namespace JobTrackerAdmin {
     
     
-    public partial class WebForm5 {
+    public partial class WebForm7 {
         
         /// <summary>
-        /// DbDataPlaceholder control.
+        /// btn_Save control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder DbDataPlaceholder;
+        protected global::System.Web.UI.WebControls.Button btn_Save;
     }
 }
