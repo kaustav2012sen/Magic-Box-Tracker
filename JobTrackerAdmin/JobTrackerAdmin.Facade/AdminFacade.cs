@@ -18,6 +18,11 @@ namespace JobTrackerAdmin.Facade
             return clientData.GetAllClients();
         }
 
+        public int SaveClientData(string ClientName, string ClientAddress, double ClientContact, string ClientGST, string ClientPAN, string ClientRemarks)
+        {
+            return clientData.SaveClientDetails(ClientName, ClientAddress, ClientContact, ClientGST, ClientPAN, ClientRemarks);
+        }
+
         #endregion
 
         #region Vendor

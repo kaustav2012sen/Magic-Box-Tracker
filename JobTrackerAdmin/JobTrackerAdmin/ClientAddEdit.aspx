@@ -7,13 +7,14 @@
 			    <h3 class="panel-title">Add New Clients</h3>
 			</div>
             <div class="panel-body">
-               <input type="text" class="form-control" placeholder="Client Name">
-               <input type="text" class="form-control" placeholder="Client Address">
-               <input type="text" class="form-control" placeholder="Client Contact Number">
-               <input type="text" class="form-control" placeholder="Client GSTN">
-                <input type="text" class="form-control" placeholder="Client PAN">
-                <input type="text" class="form-control" placeholder="Client Remark">
-                <button type="button" class="btn btn-primary">Save</button>
+               <input type="text" class="form-control" placeholder="Client Name" name="ClientName">
+               <input type="text" class="form-control" placeholder="Client Address" name="ClientAddress">
+               <input type="text" class="form-control" placeholder="Client Contact Number" name="ClientContact">
+               <input type="text" class="form-control" placeholder="Client GSTN" name="ClientGST">
+                <input type="text" class="form-control" placeholder="Client PAN" name="ClientPAN">
+                <input type="text" class="form-control" placeholder="Client Remark" name="ClientRemark">
+                <asp:Button ID="btn_Save" runat="server" Text="Save" CssClass="btn btn-primary" OnClick="btn_Save_Click" />
+                <%--<button type="button" class="btn btn-primary">Save</button>--%>
 				<button type="button" class="btn btn-info">Reset</button>
             </div>            
         </div>
