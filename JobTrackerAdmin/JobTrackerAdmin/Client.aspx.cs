@@ -31,7 +31,7 @@ namespace JobTrackerAdmin
                 {
                     htmlTable.AppendLine("<tr>");
 
-                    htmlTable.AppendLine("<td><a href='#' dataval="+ dt.Rows[i]["ClientID"]+">" + dt.Rows[i]["ClientName"] + "</a></td>");
+                    htmlTable.AppendLine("<td><a href=ClientAddEdit.aspx?id="+dt.Rows[i]["ClientID"]+" dataval="+ dt.Rows[i]["ClientID"]+">" + dt.Rows[i]["ClientName"] + "</a></td>");
                     htmlTable.AppendLine("<td>" + dt.Rows[i]["ClientAddress"] + "</td>");
                     htmlTable.AppendLine("<td>" + dt.Rows[i]["ClientContact"] + "</td>");
                     htmlTable.AppendLine("<td>" + dt.Rows[i]["ClientGST"] + "</td>");

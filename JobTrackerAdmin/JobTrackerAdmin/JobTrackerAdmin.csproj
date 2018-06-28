@@ -66,7 +66,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="loginPage.aspx" />
     <Content Include="Client.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Ink.aspx" />
@@ -163,13 +162,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="loginPage.aspx.cs">
-      <DependentUpon>loginPage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="loginPage.aspx.designer.cs">
-      <DependentUpon>loginPage.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Client.aspx.cs">
       <DependentUpon>Client.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
