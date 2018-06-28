@@ -157,6 +157,7 @@
     <Content Include="assets\vendor\toastr\toastr.min.js" />
     <Content Include="Paper.aspx" />
     <Content Include="Vendor.aspx" />
+    <Content Include="VendorAddEdit.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -242,6 +243,13 @@
     </Compile>
     <Compile Include="DigitalJobCardEntry.aspx.designer.cs">
       <DependentUpon>DigitalJobCardEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VendorAddEdit.aspx.cs">
+      <DependentUpon>VendorAddEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VendorAddEdit.aspx.designer.cs">
+      <DependentUpon>VendorAddEdit.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
