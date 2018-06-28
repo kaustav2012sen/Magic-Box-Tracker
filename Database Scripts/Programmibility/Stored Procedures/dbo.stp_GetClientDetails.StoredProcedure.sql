@@ -48,8 +48,13 @@ BEGIN
 		INSERT INTO Clients
 		VALUES (@ClientName, @ClientAddress, @ClientContact, @ClientGST, @ClientPAN, @ClientRemarks)
 
+<<<<<<< HEAD
+		SET @ClientID = SCOPE_IDENTITY()
+		SELECT @ClientID AS ClientID
+=======
 		SET @Status=1
 		SELECT @Status AS [Status]
+>>>>>>> 638f600aeaeabd11537f82622886612e7971f215
 END
 
 ELSE IF @MenuTag = 2
@@ -58,6 +63,10 @@ BEGIN
 		SET clientName = @ClientName, ClientAddress = @ClientAddress, ClientContact = @ClientContact, ClientGST = @ClientGST, ClientPAN = @ClientPAN, ClientRemarks = @ClientRemarks
 		WHERE clientId = @ClientID
 END
+<<<<<<< HEAD
+
+=======
+>>>>>>> 638f600aeaeabd11537f82622886612e7971f215
 ELSE IF @MenuTag = 3
 BEGIN
 		DELETE FROM Clients

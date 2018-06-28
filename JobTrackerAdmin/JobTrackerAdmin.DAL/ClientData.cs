@@ -27,6 +27,10 @@ namespace JobTrackerAdmin.DAL
             return dt; 
         }
 
+<<<<<<< HEAD
+        
+
+=======
         public int SaveClientDetails(string ClientName,string ClientAddress, double ClientContact, string ClientGST, string ClientPAN, string ClientRemarks)
         {
             int i=0;
@@ -56,5 +60,6 @@ namespace JobTrackerAdmin.DAL
            
             return i; 
         }
+>>>>>>> 638f600aeaeabd11537f82622886612e7971f215
     }
 }
