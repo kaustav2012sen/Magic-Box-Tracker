@@ -17,6 +17,10 @@ namespace JobTrackerAdmin.Facade
         {
             return clientData.GetAllClients();
         }
+        public DataTable GetClientDetailByID(int CLientID)
+        {
+            return clientData.GetClientDetailByID(CLientID);
+        }
 
         public int SaveClientData(string ClientName, string ClientAddress, double ClientContact, string ClientGST, string ClientPAN, string ClientRemarks)
         {

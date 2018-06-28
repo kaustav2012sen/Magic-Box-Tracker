@@ -27,6 +27,22 @@ namespace JobTrackerAdmin.DAL
             return dt; 
         }
 
+        public DataTable GetClientDetailByID(int CLientID)
+        {
+            DataTable dt = new DataTable();
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["connect"].ToString());
+            con.Open();
+            SqlDataAdapter da = new SqlDataAdapter();
+            SqlCommand cmd = new SqlCommand("stp_GetClientDetails", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@ClientID", SqlDbType.Int).Value = CLientID;
+            cmd.Parameters.Add("@MenuTag", SqlDbType.BigInt).Value = 0;
+            da.SelectCommand = cmd;
+            da.Fill(dt);
+            con.Close();
+            return dt;
+        }
+
 
         
 

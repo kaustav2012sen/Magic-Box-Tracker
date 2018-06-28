@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using JobTrackerAdmin.Facade;
+using System.Data;
 
 namespace JobTrackerAdmin
 {
@@ -15,7 +16,11 @@ namespace JobTrackerAdmin
         protected void Page_Load(object sender, EventArgs e)
         {
             string id = Request.QueryString["id"];
-
+            if(Convert.ToInt32(id)>0)
+            {
+                DataTable dt = new DataTable();
+                dt=_adminfacade.GetClientDetailByID(Convert.ToInt32(id));
+            }
         }
 
         protected void btn_Save_Click(object sender, EventArgs e)
