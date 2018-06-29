@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobTrackerAdmin.DAL", "JobT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobTrackerAdmin.Facade", "JobTrackerAdmin.Facade\JobTrackerAdmin.Facade.csproj", "{5DF6ECA0-E19E-4268-B722-230F983761D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JobTrackerAdmin.BO", "JobTrackerAdmin.BO\JobTrackerAdmin.BO.csproj", "{F6F8983E-87EE-470E-932E-DC9944890E1E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{5DF6ECA0-E19E-4268-B722-230F983761D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DF6ECA0-E19E-4268-B722-230F983761D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DF6ECA0-E19E-4268-B722-230F983761D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6F8983E-87EE-470E-932E-DC9944890E1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6F8983E-87EE-470E-932E-DC9944890E1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6F8983E-87EE-470E-932E-DC9944890E1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6F8983E-87EE-470E-932E-DC9944890E1E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
