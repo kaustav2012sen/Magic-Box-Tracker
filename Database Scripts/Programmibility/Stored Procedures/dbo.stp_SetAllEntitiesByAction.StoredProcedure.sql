@@ -50,7 +50,7 @@ BEGIN
 
 DECLARE @Status INT=0;
 /**********************************************Operation For Clients*************************************************/
-IF @MenuTag =1
+IF @MenuTag =0
 	BEGIN
 		IF @ActionTag=0
 			BEGIN
@@ -75,5 +75,68 @@ IF @MenuTag =1
 
 /********************************************Operation For Vendor*******************************************************/
 
+IF @MenuTag =1
+	BEGIN
+		IF @ActionTag=0
+			BEGIN
+				INSERT INTO Vendors
+				VALUES (@Attr_NVarchar1, @Attr_NVarchar2, @Attr_Float1, @Attr_NVarchar3, @Attr_NVarchar4, @Attr_NVarchar5, @Attr_NVarchar6)
+
+				SET @Status=1
+				SELECT @Status AS [Status]
+			END
+		ELSE
+			BEGIN
+				UPDATE Vendors
+				SET VendorName = @Attr_NVarchar1, 
+					VendorAddress = @Attr_NVarchar2, 
+					VendorContact = @Attr_Float1, 
+					VendorEmail = @Attr_NVarchar3,
+					VendorGST = @Attr_NVarchar4, 
+					VendorPAN = @Attr_NVarchar5, 
+					VendorRemarks = @Attr_NVarchar6
+				WHERE VendorId = @Attr_Integer1
+			END
+	END
+/********************************************Operation For Media*******************************************************/
+
+IF @MenuTag =2
+	BEGIN
+		IF @ActionTag=0
+			BEGIN
+				INSERT INTO Media
+				VALUES (@Attr_NVarchar1, @Attr_NVarchar2)
+
+				SET @Status=1
+				SELECT @Status AS [Status]
+			END
+		ELSE
+			BEGIN
+				UPDATE Media
+				SET MediaType = @Attr_NVarchar1, 
+					Remarks = @Attr_NVarchar2
+				WHERE MediaId = @Attr_Integer1
+			END
+	END
+/********************************************Operation For Paper*******************************************************/
+
+IF @MenuTag =3
+	BEGIN
+		IF @ActionTag=0
+			BEGIN
+				INSERT INTO Papers
+				VALUES (@Attr_NVarchar1, @Attr_NVarchar2)
+
+				SET @Status=1
+				SELECT @Status AS [Status]
+			END
+		ELSE
+			BEGIN
+				UPDATE Papers
+				SET PaperType = @Attr_NVarchar1, 
+					PaperRemarks = @Attr_NVarchar2
+				WHERE PaperId = @Attr_Integer1
+			END
+	END
 END
 GO
