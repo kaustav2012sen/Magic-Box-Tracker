@@ -12,14 +12,22 @@ namespace JobTrackerAdmin
     public partial class WebForm7 : System.Web.UI.Page
     {
         AdminFacade _adminfacade = new AdminFacade();
+        public string ClientTitle = string.Empty;
 
         protected void Page_Load(object sender, EventArgs e)
         {
             string id = Request.QueryString["id"];
-            if(Convert.ToInt32(id)>0)
+            DataTable dt = new DataTable();
+
+            if (Convert.ToInt32(id)>0)
             {
-                DataTable dt = new DataTable();
                 dt=_adminfacade.GetClientDetailByID(Convert.ToInt32(id));
+            }
+
+            if(dt.Rows.Count>0)
+            {
+                string ClientName = dt.Rows[0]["ClientNAme"].ToString();
+                ClientTitle = ClientName;
             }
         }
 

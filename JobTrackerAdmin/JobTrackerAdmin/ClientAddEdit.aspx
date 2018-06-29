@@ -6,8 +6,8 @@
             <div class="panel-heading">
 			    <h3 class="panel-title">Add New Clients</h3>
 			</div>
-            <div class="panel-body">
-               <input type="text" class="form-control" placeholder="Client Name" name="ClientName">
+            <div class="panel-body" runat="server" id="ClientDiv">
+               <input type="text" class="form-control" placeholder="Client Name" name="ClientName" value="<% =ClientTitle %>">
                <input type="text" class="form-control" placeholder="Client Address" name="ClientAddress">
                <input type="text" class="form-control" placeholder="Client Contact Number" name="ClientContact">
                <input type="text" class="form-control" placeholder="Client GSTN" name="ClientGST">
