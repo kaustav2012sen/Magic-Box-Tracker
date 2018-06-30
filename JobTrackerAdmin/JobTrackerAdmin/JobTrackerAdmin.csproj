@@ -257,6 +257,10 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\JobTrackerAdmin.BO\JobTrackerAdmin.BO.csproj">
+      <Project>{f6f8983e-87ee-470e-932e-dc9944890e1e}</Project>
+      <Name>JobTrackerAdmin.BO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\JobTrackerAdmin.Facade\JobTrackerAdmin.Facade.csproj">
       <Project>{5df6eca0-e19e-4268-b722-230f983761d7}</Project>
       <Name>JobTrackerAdmin.Facade</Name>

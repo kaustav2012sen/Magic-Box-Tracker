@@ -8,8 +8,8 @@
 			</div>
             <div class="panel-body" runat="server" id="ClientDiv">
                <input type="text" class="form-control" placeholder="Client Name" name="ClientName" value="<% =ClientTitle %>">
-               <input type="text" class="form-control" placeholder="Client Address" name="ClientAddress">
-               <input type="text" class="form-control" placeholder="Client Contact Number" name="ClientContact">
+               <input type="text" class="form-control" placeholder="Client Address" name="ClientAddress" >
+               <input type="text" class="form-control" placeholder="Client Contact Number" name="ClientContact" >
                <input type="text" class="form-control" placeholder="Client GSTN" name="ClientGST">
                 <input type="text" class="form-control" placeholder="Client PAN" name="ClientPAN">
                 <input type="text" class="form-control" placeholder="Client Remark" name="ClientRemark">

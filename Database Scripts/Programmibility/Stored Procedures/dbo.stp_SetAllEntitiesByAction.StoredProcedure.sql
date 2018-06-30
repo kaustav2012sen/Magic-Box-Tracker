@@ -70,6 +70,9 @@ IF @MenuTag =0
 					clientPAN = @Attr_NVarchar4, 
 					clientRemarks = @Attr_NVarchar5
 				WHERE clientId = @Attr_Integer1
+
+				SET @Status=2
+				SELECT @Status AS [Status]
 			END
 	END
 

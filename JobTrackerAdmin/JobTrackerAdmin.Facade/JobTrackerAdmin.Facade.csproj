@@ -81,6 +81,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\JobTrackerAdmin.BO\JobTrackerAdmin.BO.csproj">
+      <Project>{f6f8983e-87ee-470e-932e-dc9944890e1e}</Project>
+      <Name>JobTrackerAdmin.BO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\JobTrackerAdmin.DAL\JobTrackerAdmin.DAL.csproj">
       <Project>{dc4f17ef-fe5f-4ee7-801c-3b434f6a1759}</Project>
       <Name>JobTrackerAdmin.DAL</Name>

@@ -32,5 +32,8 @@ namespace JobTrackerAdmin.BO
         public float Attr_Float3 { get; set; }
         public float Attr_Float4 { get; set; }
         public float Attr_Float5 { get; set; }
+        public double Attr_Double1 { get; set; }
+        public double Attr_Double2 { get; set; }
+        public double Attr_Double3 { get; set; }
     }
 }
