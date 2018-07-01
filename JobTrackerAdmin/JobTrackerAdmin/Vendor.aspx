@@ -7,15 +7,16 @@
 			    <h3 class="panel-title">Vendor List</h3>
 			</div>
                  <div class="panel-body">
-              <table id="ClientTable" class="table table-bordered table-striped">
+              <table id="VendorTable" class="table table-bordered table-striped">
                             
                 <thead>
                 <tr>
                   <th class="auto-style1" >Vendor Name</th>
                   <th class="auto-style1">Address</th>
                   <th class="auto-style1">Contact</th>
-                  <th class="auto-style1">GST</th>
+                  <th class="auto-style1">Email</th>
                   <th class="auto-style1">PAN</th>
+                  <th class="auto-style1">GST</th>
                   <th class="auto-style1">Remarks</th>
                   <%--<th>Dummy</th>--%>
                 </tr>

@@ -10,8 +10,8 @@
                <input type="text" class="form-control" placeholder="Client Name" name="ClientName" value="<% =ClientName %>">
                <input type="text" class="form-control" placeholder="Client Address" name="ClientAddress" value="<% =ClientAddress %> ">
                <input type="text" class="form-control" placeholder="Client Contact Number" name="ClientContact" value="<% =ClientContact %>">
-               <input type="text" class="form-control" placeholder="Client GSTN" name="ClientGST" value="<% =ClientGST %>">
                 <input type="text" class="form-control" placeholder="Client PAN" name="ClientPAN" value="<% =ClientPAN %>">
+               <input type="text" class="form-control" placeholder="Client GSTN" name="ClientGST" value="<% =ClientGST %>">
                 <input type="text" class="form-control" placeholder="Client Remarks" name="ClientRemarks" value="<% =ClientRemarks %>" >
                 <asp:Button ID="btn_Save" runat="server" Text="Save" CssClass="btn btn-primary" OnClick="btn_Save_Click" />
                 <%--<button type="button" class="btn btn-primary">Save</button>--%>

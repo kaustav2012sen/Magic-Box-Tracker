@@ -43,7 +43,20 @@ namespace JobTrackerAdmin.Facade
         {
             return vendorData.GetAllVendors();
         }
+        public DataTable GetVendorDetailByID(int VendorID)
+        {
+            return vendorData.GetVendorDetailByID(VendorID);
+        }
 
+        public int SaveVendorData(Instance oInstance)
+        {
+            return vendorData.SaveVendorDetails(oInstance);
+        }
+
+        public int SaveVendorData(string VendorName, string VendorAddress, double VendorContact, string VendorEmail, string VendorPAN, string VendorGST, string VendorRemarks)
+        {
+            return vendorData.SaveVendorDetails(VendorName, VendorAddress, VendorContact, VendorEmail, VendorPAN, VendorGST, VendorRemarks);
+        }
         #endregion
 
         #region Paper
