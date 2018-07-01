@@ -11,6 +11,7 @@ namespace JobTrackerAdmin.DAL
 {
     public class ClientData
     {
+        #region Get Clients
         public DataTable GetAllClients()  //To Retreive all the Data of the Clients
         {
             DataTable dt = new DataTable();
@@ -44,8 +45,11 @@ namespace JobTrackerAdmin.DAL
             return dt;
         }
 
+        #endregion
 
-        
+
+
+        #region Save(Add/Edit) Client Details
 
 
         public int SaveClientDetails(string ClientName,string ClientAddress, double ClientContact, string ClientGST, string ClientPAN, string ClientRemarks)
@@ -79,7 +83,7 @@ namespace JobTrackerAdmin.DAL
         }
 
 
-        public int SaveClientDetails(Instance oInstance)
+        public int SaveClientDetails(Instance oInstance)   // Function to Save Add/Edit Client Details
         {
             int i = 0;
             DataTable dt = new DataTable();
@@ -109,6 +113,8 @@ namespace JobTrackerAdmin.DAL
 
             return i;
         }
+
+#endregion
 
     }
 }

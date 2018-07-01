@@ -97,6 +97,7 @@
     <Content Include="PaperAddEdit.aspx" />
     <Content Include="MediaAddEdit.aspx" />
     <Content Include="DigitalJobCardEntry.aspx" />
+    <Content Include="Dashboard.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -250,6 +251,13 @@
     </Compile>
     <Compile Include="VendorAddEdit.aspx.designer.cs">
       <DependentUpon>VendorAddEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
