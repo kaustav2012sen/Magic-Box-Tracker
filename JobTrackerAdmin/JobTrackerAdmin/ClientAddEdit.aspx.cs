@@ -66,7 +66,6 @@ namespace JobTrackerAdmin
                 {
                     Response.Write("<script>alert('Data Inserted Successfully');</script>");
                     Page.Response.Redirect(Page.Request.Url.ToString(), true);
-
                 }
             }
             else

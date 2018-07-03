@@ -19,8 +19,7 @@ namespace JobTrackerAdmin
         protected void Page_Load(object sender, EventArgs e)
         {
             dt = _adminfacade.GetAllClientDetails();
-            ClientDetailView();
-           
+            ClientDetailView();           
         }
 
         private void ClientDetailView()
