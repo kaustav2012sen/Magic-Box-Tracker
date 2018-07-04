@@ -23,6 +23,7 @@ namespace JobTrackerAdmin
         public string VendorRemarks = string.Empty;
 
         string id = string.Empty;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             id = Request.QueryString["id"];
@@ -42,7 +43,7 @@ namespace JobTrackerAdmin
                 VendorGST = dt.Rows[0]["VendorGST"].ToString();
                 VendorPAN = dt.Rows[0]["VendorPAN"].ToString();
                 VendorRemarks = dt.Rows[0]["VendorRemarks"].ToString();
-
+      
             }
 
         }

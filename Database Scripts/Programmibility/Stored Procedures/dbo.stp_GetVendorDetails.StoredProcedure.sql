@@ -8,7 +8,7 @@ GO
 -- =============================================
 -- Author:		<Kaustav Sen>
 -- Create date: <15/03/2018>
--- Description:	<To Get Details of All Clients>
+-- Description:	<To Get Details of All Vendors>
 -- Execute: EXEC stp_GetVendorDetails 1,'Rahul Das Naskar','',9831214339,'','','',0
 -- MenuTag: 0-View, 1-Insert, 2-Update, 3-Delete
 -- =============================================
@@ -29,29 +29,57 @@ AS
 SET NOCOUNT ON;
 BEGIN
 
+DECLARE @Status INT=0;
+
+
+
 IF @MenuTag = 0
-		SELECT 
-		MC.VendorId AS VendorID, 
-		MC.VendorName AS VendorName,
-		MC.VendorAddress AS VendorAddress,
-		MC.VendorContact AS VendorContact,
-		MC.VendorEmail AS VendorEmail,
-		MC.VendorGST AS VendorGST,
-		MC.VendorPAN AS VendorPAN,
-		MC.VendorRemarks AS VendorRemarks
-		FROM Vendors MC
+BEGIN 
+	IF @VendorID>0
+		BEGIN
+			SELECT 
+				MC.VendorId AS VendorID, 
+				MC.VendorName AS VendorName,
+				MC.VendorAddress AS VendorAddress,
+				MC.VendorContact AS VendorContact,
+				MC.VendorGST AS VendorGST,
+				MC.VendorPAN AS VendorPAN,
+				MC.VendorRemarks AS VendorRemarks
+				FROM Vendors MC WHERE MC.VendorId=@VendorID;
+		END
+	ELSE
+		BEGIN
+				SELECT 
+				MC.VendorId AS VendorID, 
+				MC.VendorName AS VendorName,
+				MC.VendorAddress AS VendorAddress,
+				MC.VendorContact AS VendorContact,
+				mc.VendorEmail as VendorEmail,
+				MC.VendorGST AS VendorGST,
+				MC.VendorPAN AS VendorPAN,
+				MC.VendorRemarks AS VendorRemarks
+				FROM Vendors MC
+		END
+END
 
 ELSE IF @MenuTag = 1
+BEGIN
 		INSERT INTO Vendors
 		VALUES (@VendorName, @VendorAddress, @VendorContact, @VendorEmail, @VendorGST, @VendorPAN, @VendorRemarks)
 
-ELSE IF @MenuTag = 2
-		UPDATE Vendors
-		SET VendorName = @VendorName, VendorAddress = @VendorAddress, VendorContact = @VendorContact, VendorEmail = @VendorEmail ,VendorGST = @VendorGST, VendorPAN = @VendorPAN, VendorRemarks = @VendorRemarks
-		WHERE VendorId = @VendorID
+		SET @Status=1
+		SELECT @Status AS [Status]
+END
 
+ELSE IF @MenuTag = 2
+BEGIN
+		UPDATE Vendors
+		SET VendorName = @VendorName, VendorAddress = @VendorAddress, VendorContact = @VendorContact, VendorGST = @VendorGST, VendorPAN = @VendorPAN, VendorRemarks = @VendorRemarks
+		WHERE VendorId = @VendorID
+END
 ELSE IF @MenuTag = 3
+BEGIN
 		DELETE FROM Vendors
 		WHERE VendorId = @VendorID
 END
-GO
+END
