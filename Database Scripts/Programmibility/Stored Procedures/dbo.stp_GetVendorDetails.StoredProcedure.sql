@@ -9,7 +9,7 @@ GO
 -- Author:		<Kaustav Sen>
 -- Create date: <15/03/2018>
 -- Description:	<To Get Details of All Vendors>
--- Execute: EXEC stp_GetVendorDetails 1,'Rahul Das Naskar','',9831214339,'','','',0
+-- Execute: EXEC stp_GetVendorDetails @VendorID=3,@MenuTag=0
 -- MenuTag: 0-View, 1-Insert, 2-Update, 3-Delete
 -- =============================================
 CREATE PROCEDURE [dbo].[stp_GetVendorDetails]
@@ -31,7 +31,7 @@ BEGIN
 
 DECLARE @Status INT=0;
 
-
+--SELECT @VendorID
 
 IF @MenuTag = 0
 BEGIN 
@@ -42,6 +42,7 @@ BEGIN
 				MC.VendorName AS VendorName,
 				MC.VendorAddress AS VendorAddress,
 				MC.VendorContact AS VendorContact,
+				MC.VendorEmail as VendorEmail,
 				MC.VendorGST AS VendorGST,
 				MC.VendorPAN AS VendorPAN,
 				MC.VendorRemarks AS VendorRemarks
@@ -54,7 +55,7 @@ BEGIN
 				MC.VendorName AS VendorName,
 				MC.VendorAddress AS VendorAddress,
 				MC.VendorContact AS VendorContact,
-				mc.VendorEmail as VendorEmail,
+				MC.VendorEmail as VendorEmail,
 				MC.VendorGST AS VendorGST,
 				MC.VendorPAN AS VendorPAN,
 				MC.VendorRemarks AS VendorRemarks
