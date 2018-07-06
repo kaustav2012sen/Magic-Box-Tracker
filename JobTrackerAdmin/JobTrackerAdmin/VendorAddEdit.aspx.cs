@@ -59,7 +59,7 @@ namespace JobTrackerAdmin
                 oInstance.Attr_NVarchar2 = Request.Form["VendorAddress"];
                 oInstance.Attr_Double1 = Convert.ToDouble(Request.Form["VendorContact"]);
                 oInstance.Attr_NVarchar3 = Request.Form["VendorEmail"];
-                oInstance.Attr_NVarchar4 = Request.Form["VendorGST"];
+                oInstance.Attr_NVarchar4 = Request.Form["VendorGSTN"];
                 oInstance.Attr_NVarchar5 = Request.Form["VendorPAN"];
                 oInstance.Attr_NVarchar6 = Request.Form["VendorRemarks"];
 

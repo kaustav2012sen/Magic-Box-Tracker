@@ -12,8 +12,8 @@
                <input type="text" class="form-control" placeholder="Vendor Address" name="VendorAddress" value="<% =VendorAddress %>">
                <input type="text" class="form-control" placeholder="Vendor Contact Number" name="VendorContact" value="<% =VendorContact %>">
                <input type="text" class="form-control" placeholder="Vendor Email" name="VendorEmail" value="<% =VendorEmail %>">
-                <input type="text" class="form-control" placeholder="Vendor PAN" name="VendorPAN" value="<% =VendorPAN %>">
-               <input type="text" class="form-control" placeholder="Vendor GSTN" name="VendorGSTN" value="<% =VendorGST %>">
+                <input type="text" class="form-control" placeholder="Vendor GSTN" name="VendorGSTN" value="<% =VendorGST %>">
+                <input type="text" class="form-control" placeholder="Vendor PAN" name="VendorPAN" value="<% =VendorPAN %>">               
                 <input type="text" class="form-control" placeholder="Vendor Remark" name="VendorRemarks" value="<% =VendorRemarks %>">
                 <asp:Button ID="btn_Save" runat="server" Text="Save" CssClass="btn btn-primary" OnClick="btn_Save_Click" />
                 <%--<button type="button" class="btn btn-primary">Save</button>--%>
