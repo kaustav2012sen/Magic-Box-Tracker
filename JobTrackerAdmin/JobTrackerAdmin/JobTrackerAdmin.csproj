@@ -98,6 +98,8 @@
     <Content Include="MediaAddEdit.aspx" />
     <Content Include="DigitalJobCardEntry.aspx" />
     <Content Include="Dashboard.aspx" />
+    <Content Include="Machine.aspx" />
+    <Content Include="Job.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -258,6 +260,20 @@
     </Compile>
     <Compile Include="Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Machine.aspx.cs">
+      <DependentUpon>Machine.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Machine.aspx.designer.cs">
+      <DependentUpon>Machine.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Job.aspx.cs">
+      <DependentUpon>Job.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Job.aspx.designer.cs">
+      <DependentUpon>Job.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

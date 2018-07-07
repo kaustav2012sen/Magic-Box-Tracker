@@ -96,6 +96,8 @@
 									<li><a href="Vendor.aspx" class="">Vendor Master</a></li>
 									<li><a href="Paper.aspx" class="">Paper Master</a></li>
 									<li><a href="Media.aspx" class="">Media Master</a></li>
+                                    <li><a href="Machine.aspx" class="">Machine Master</a></li>
+                                    <li><a href="Job.aspx" class="">Job Master</a></li>
 								</ul>
 							</div>
 						</li>
