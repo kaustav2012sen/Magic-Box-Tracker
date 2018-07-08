@@ -79,5 +79,32 @@ namespace JobTrackerAdmin.Facade
 
         #endregion
 
+        #region JobCard-Digital
+
+        DigitalJobDetails digitaldetails = new DigitalJobDetails();
+        public DataSet GetAllDigitalJobDetails()
+        {
+            return digitaldetails.GetAllDigitalJobDetails();
+        }
+        #endregion
+
+        #region Job
+        JobData jobData = new JobData();
+
+        public DataTable GetAllJobDetails()
+        {
+            return jobData.GetAllJob();
+        }
+        public DataTable GetJobDetailByID(int JobID)
+        {
+            return jobData.GetJobDetailByID(JobID);
+        }
+
+        public int SaveJobData(Instance oInstance)
+        {
+            return jobData.SaveJobDetails(oInstance);
+        }
+        #endregion
+
     }
 }

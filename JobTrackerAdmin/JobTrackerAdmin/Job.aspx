@@ -18,9 +18,10 @@
                 </tr>
                 </thead>
                 <tbody>
-                  <asp:PlaceHolder ID="DbDataPlaceholder" runat="server"></asp:PlaceHolder>
+                 <%-- <asp:PlaceHolder ID="DbDataPlaceholder" runat="server"></asp:PlaceHolder>--%>
                    
-                
+                 <asp:DropDownList ID="DropDownList1" runat="server" AppendDataBoundItems="true"
+                       DataTextField="Master Job" DataValueField="0"></asp:DropDownList>
                 </tbody>
                 <tfoot>
                 <%--<tr>
