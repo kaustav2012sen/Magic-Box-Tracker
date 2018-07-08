@@ -40,13 +40,9 @@
                                             <button type="button" class="btn btn-primary btn-xs">Last Page</button>
                                             <button type="button" class="btn btn-primary btn-xs">Export To Excel</button>
 										</div>
-										
-							
 
              </div>
-
          </div>
-
 
              <div class="col-lg-6">
                              <div class ="panel panel-default">
