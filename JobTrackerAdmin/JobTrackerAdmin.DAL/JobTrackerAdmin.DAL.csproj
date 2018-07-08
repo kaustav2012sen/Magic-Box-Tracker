@@ -80,6 +80,7 @@
   <ItemGroup>
     <Compile Include="ClientData.cs" />
     <Compile Include="DigitalJobDetails.cs" />
+    <Compile Include="JobData.cs" />
     <Compile Include="MediaData.cs" />
     <Compile Include="PaperData.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
