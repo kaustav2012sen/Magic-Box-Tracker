@@ -1,6 +1,5 @@
-USE [erp_generic_magicbox]
-GO
-/****** Object:  StoredProcedure [dbo].[stp_GetJobDetails]    Script Date: 08-07-2018 04:03:52 PM ******/
+IF EXISTS (SELECT * FROM sys.objects WHERE type = 'P' AND name = 'stp_GetJobDetails')
+	DROP PROCEDURE [dbo].[stp_GetJobDetails]
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON

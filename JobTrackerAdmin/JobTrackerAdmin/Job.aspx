@@ -20,8 +20,8 @@
                 <tbody>
                  <%-- <asp:PlaceHolder ID="DbDataPlaceholder" runat="server"></asp:PlaceHolder>--%>
                    
-                 <asp:DropDownList ID="DropDownList1" runat="server" AppendDataBoundItems="true"
-                       DataTextField="Master Job" DataValueField="0"></asp:DropDownList>
+                 <%--<asp:DropDownList ID="DropDownList1" runat="server" AppendDataBoundItems="true"
+                       DataTextField="Master Job" DataValueField="0"></asp:DropDownList>--%>
                 </tbody>
                 <tfoot>
                 <%--<tr>
@@ -57,7 +57,7 @@
           <div class="form-group">
                 <label for="clinetName">Nested Description</label>
                 <%--<input type="text" class="form-control" id="clientName" placeholder="Client Name">--%>
-              <asp:DropDownList ID="ddlNestedDescription" runat="server" CssClass="form-control"></asp:DropDownList>
+              <asp:DropDownList ID="ddlNestedDescription" runat="server" CssClass="form-control" AutoPostBack="false"></asp:DropDownList>
                 </div>
           <div class="form-group">
                 <label for="remark">Remark</label>
