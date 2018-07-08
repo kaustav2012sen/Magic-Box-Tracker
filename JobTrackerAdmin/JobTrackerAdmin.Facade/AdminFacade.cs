@@ -79,5 +79,14 @@ namespace JobTrackerAdmin.Facade
 
         #endregion
 
+        #region JobCard-Digital
+
+        DigitalJobDetails digitaldetails = new DigitalJobDetails();
+        public DataSet GetAllDigitalJobDetails()
+        {
+            return digitaldetails.GetAllDigitalJobDetails();
+        }
+#endregion
+
     }
 }

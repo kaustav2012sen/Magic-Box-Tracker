@@ -22,7 +22,9 @@
           <div class="form-group">
                 <label for="clinetName">Client Name</label>
                 <%--<input type="text" class="form-control" id="clientName" placeholder="Client Name">--%>
-              <asp:DropDownList ID="ddlClient" runat="server" CssClass="form-control"></asp:DropDownList>
+              <asp:DropDownList ID="ddlClient" runat="server" CssClass="form-control">
+               <asp:ListItem Selected="True" Value="0" Text="-----Select------"></asp:ListItem>
+                  </asp:DropDownList>
                 </div>
                     <div class="form-group">
                 <label for="printer">Printer Name</label>
