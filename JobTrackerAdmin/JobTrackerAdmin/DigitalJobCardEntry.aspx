@@ -38,18 +38,19 @@
                 </div>
                     <div class="form-group">
                 <label for="paperQty">Paper Qty</label>
-                <input type="number" class="form-control" id="paperQty" placeholder="Paper Qty">
+                <input type="number" class="form-control" id="paperQty" placeholder="Paper Qty" name="paperQty">
                 </div>
                     <div class="form-group">
                 <label for="printQty">Print Qty</label>
-                <input type="text" class="form-control" id="printQty" placeholder="Print Qty">
+                <input type="text" class="form-control" id="printQty" placeholder="Print Qty" name="printQty">
                 </div>
           <div class="form-group">
                 <label for="remark">Remark</label>
-               <textarea class="form-control" rows="5"></textarea>
+               <textarea class="form-control" rows="5" name="DigitalRemarks"></textarea>
                 </div>
 
-           <button type="button" class="btn btn-primary">Save</button>
+           <%--<button type="button" class="btn btn-primary">Save</button>--%>
+                <asp:Button ID="btn_SaveJob" runat="server" Text="Save" CssClass="btn btn-primary" OnClick="btn_SaveJob_Click" />
 				<button type="button" class="btn btn-info">Reset</button>
 
 

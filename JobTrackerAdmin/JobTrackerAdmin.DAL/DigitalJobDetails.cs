@@ -27,5 +27,27 @@ namespace JobTrackerAdmin.DAL
             con.Close();
             return ds;
         }
+
+        public int SaveDigitalJobDetails(int ClientID,int MachineID,int PaperQty,int PrintQty, string Remarks)
+        {
+            int i = 0;
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["connect"].ToString());
+            con.Open();
+
+
+            SqlCommand cmd = new SqlCommand("stp_SaveDigitalJobCard", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@ClientID ", SqlDbType.Int).Value = ClientID;
+            cmd.Parameters.Add("@PrinterID ", SqlDbType.Int).Value = MachineID;
+            cmd.Parameters.Add("@PaperQuantity", SqlDbType.Int).Value = PaperQty;
+            cmd.Parameters.Add("@PrintQuantity", SqlDbType.Int).Value = PrintQty;
+            cmd.Parameters.Add("DigitalRemarks", SqlDbType.NVarChar).Value = Remarks;
+            cmd.Parameters.Add("@Status", SqlDbType.TinyInt).Direction = ParameterDirection.Output;
+            cmd.ExecuteNonQuery();
+            i = Convert.ToInt32(cmd.Parameters["@Status"].Value);
+
+
+            return i;
+        }
     }
 }

@@ -5,7 +5,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 CREATE TABLE [dbo].[tbl_mst_JobCard](
-	[PK_intJobCardID] [int] IDENTITY(1,1) NOT NULL,
+	[PK_intJobCardID] [int] IDENTITY(100,1) NOT NULL,
 	[FK_intClientID] [int] NOT NULL,
 	[FK_IntPrinterID] [int] NOT NULL,
 	[Paper_Quantity] [int] NULL,
@@ -23,5 +23,7 @@ CREATE TABLE [dbo].[tbl_mst_JobCard](
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
 GO
+
+
 
 
