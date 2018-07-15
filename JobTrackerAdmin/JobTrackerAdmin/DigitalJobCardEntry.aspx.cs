@@ -33,8 +33,14 @@ namespace JobTrackerAdmin
             ddlClient.DataSource = ds.Tables[0];
             ddlClient.DataTextField = ds.Tables[0].Columns["ClientName"].ToString();
             ddlClient.DataValueField = ds.Tables[0].Columns["ClientID"].ToString();
-            //ddlClient.Items.Insert(0, "-------Select------");
+            ddlClient.Items.Insert(0, new ListItem("-- Select --", String.Empty));
+           
             ddlClient.DataBind();
+
+            ddlPrinter.DataSource = ds.Tables[2];
+            ddlPrinter.DataTextField = ds.Tables[2].Columns["MachineDescription"].ToString();
+            ddlPrinter.DataValueField = ds.Tables[2].Columns["MachineID"].ToString();
+            ddlPrinter.DataBind();
         }
     }
 }
