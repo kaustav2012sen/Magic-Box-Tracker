@@ -12,6 +12,9 @@ namespace JobTrackerAdmin
     public partial class WebForm11 : System.Web.UI.Page
     {
         AdminFacade _adminfacade = new AdminFacade();
+
+        
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if(!IsPostBack)
@@ -54,6 +57,17 @@ namespace JobTrackerAdmin
 
             int i = _adminfacade.SaveDigitalJobDetails(ClientID, MachineID, PaperQty, PrintQty, DigitalRemarks);
 
+            if(i>0)
+            {
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "toastr_message", "toastr.info('Data Saved Successfully', 'Error')", true);
+            }
+
         }
+
+
+        
+
     }
+
+    
 }
