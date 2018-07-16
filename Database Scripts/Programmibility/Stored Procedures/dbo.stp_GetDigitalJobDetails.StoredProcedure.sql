@@ -48,7 +48,7 @@ DECLARE @JOBID TABLE
 /***************************************SECTION FOR FETCHING DIGITAL JOBS********************************/
 
 	 SELECT 
-	 PK_intJobCardID,
+	 PK_intJobCardID AS JobCardID,
 	 ClientName,MachineDescription,
 	 Paper_Quantity,
 	 Print_Quantity,
