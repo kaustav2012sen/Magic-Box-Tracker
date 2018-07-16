@@ -44,5 +44,15 @@ DECLARE @JOBID TABLE
 	  FROM Machine TM1
 	 INNER JOIN Job TJ1 ON TJ1.JobID=TM1.JobCategory	 
 	 Where TM1.JobCategory IN (SELECT J1.JobID FROM @JOBID J1)
+
+/***************************************SECTION FOR FETCHING DIGITAL JOBS********************************/
+
+	 SELECT 
+	 PK_intJobCardID,
+	 ClientName,MachineDescription,
+	 Paper_Quantity,
+	 Print_Quantity,
+	 JobDescription 
+	 FROM ViewDigitalJobDeatils
 END
 GO
