@@ -70,6 +70,7 @@
                 <tr>
                   <th class="auto-style1" >Job Card No.</th>
                   <th class="auto-style1">Client Name</th>
+                  <th class="auto-style1">Printer Name</th>
                   <th class="auto-style1">Paper Type</th>
                   <th class="auto-style1">Print Qty</th>
                   <th class="auto-style1">Paper Qty</th>
