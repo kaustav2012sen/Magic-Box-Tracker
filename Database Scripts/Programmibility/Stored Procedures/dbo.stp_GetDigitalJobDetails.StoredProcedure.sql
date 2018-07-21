@@ -49,7 +49,9 @@ DECLARE @JOBID TABLE
 
 	 SELECT 
 	 PK_intJobCardID AS JobCardID,
-	 ClientName,MachineDescription,
+	 ClientName,
+	 PaperType,
+	 MachineDescription,
 	 Paper_Quantity,
 	 Print_Quantity,
 	 JobDescription 

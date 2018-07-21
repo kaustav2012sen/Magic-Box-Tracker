@@ -39,6 +39,15 @@
               </asp:DropDownList>
 
                 </div>
+                 <div class="form-group">
+                <label for="printer">Paper Name</label>
+                <%--<input type="text" class="form-control" id="printer" placeholder="Printer Name">--%>
+              <asp:DropDownList ID="ddlPaper" runat="server" CssClass="form-control">
+               <asp:ListItem Selected="True" Value="0" Text="-----Select------"></asp:ListItem>
+
+              </asp:DropDownList>
+
+                </div>
                     <div class="form-group">
                 <label for="paperQty">Paper Qty</label>
                 <input type="number" class="form-control" id="paperQty" placeholder="Paper Qty" name="paperQty">

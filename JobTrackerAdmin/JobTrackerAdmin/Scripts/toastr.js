@@ -167,6 +167,7 @@
                     hideDuration: 1000,
                     hideEasing: 'swing',
                     onHidden: undefined,
+                    showHideTransition:'slide',
 
                     extendedTimeOut: 1000,
                     iconClasses: {

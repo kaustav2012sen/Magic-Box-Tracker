@@ -42,6 +42,12 @@ namespace JobTrackerAdmin
             ddlClient.DataBind();
             ddlClient.Items.Insert(0, new ListItem("-- Select --", "0"));
 
+            ddlPaper.DataSource = ds.Tables[1];
+            ddlPaper.DataTextField = ds.Tables[1].Columns["PaperType"].ToString();
+            ddlPaper.DataValueField = ds.Tables[1].Columns["PaperID"].ToString();
+            ddlPaper.DataBind();
+            ddlPaper.Items.Insert(0, new ListItem("-- Select --", "0"));
+
             ddlPrinter.DataSource = ds.Tables[2];
             ddlPrinter.DataTextField = ds.Tables[2].Columns["MachineDescription"].ToString();
             ddlPrinter.DataValueField = ds.Tables[2].Columns["MachineID"].ToString();
@@ -59,12 +65,12 @@ namespace JobTrackerAdmin
                     htmlTable.AppendLine("<tr>");
 
                     htmlTable.AppendLine("<td><a href=DigitalJobCardEntry.aspx?id=" + ds.Tables[3].Rows[i]["JobCardID"] + " dataval=" +ds.Tables[3].Rows[i]["JobCardID"] + ">" +ds.Tables[3].Rows[i]["JobCardID"] + "</a></td>");
-                    htmlTable.AppendLine("<td>" +ds.Tables[3].Rows[i]["ClientName"] + "</td>");
-                    htmlTable.AppendLine("<td>" +ds.Tables[3].Rows[i]["MachineDescription"] + "</td>");
-                    htmlTable.AppendLine("<td>" + "" + "</td>");
-                    htmlTable.AppendLine("<td>" +ds.Tables[3].Rows[i]["Paper_Quantity"] + "</td>");
-                    htmlTable.AppendLine("<td>" +ds.Tables[3].Rows[i]["Print_Quantity"] + "</td>");
-                    htmlTable.AppendLine("<td>" +ds.Tables[3].Rows[i]["JobDescription"] + "</td>");
+                    htmlTable.AppendLine("<td>" + ds.Tables[3].Rows[i]["ClientName"] + "</td>");
+                    htmlTable.AppendLine("<td>" + ds.Tables[3].Rows[i]["MachineDescription"] + "</td>");
+                    htmlTable.AppendLine("<td>" + ds.Tables[3].Rows[i]["PaperType"] + "</td>");
+                    htmlTable.AppendLine("<td>" + ds.Tables[3].Rows[i]["Paper_Quantity"] + "</td>");
+                    htmlTable.AppendLine("<td>" + ds.Tables[3].Rows[i]["Print_Quantity"] + "</td>");
+                    htmlTable.AppendLine("<td>" + ds.Tables[3].Rows[i]["JobDescription"] + "</td>");
 
                     htmlTable.AppendLine("</tr>");
                 }
@@ -77,15 +83,16 @@ namespace JobTrackerAdmin
         {
             int ClientID = Convert.ToInt32(ddlClient.SelectedValue);
             int MachineID = Convert.ToInt32(ddlPrinter.SelectedValue);
+            int PaperID = Convert.ToInt32(ddlPaper.SelectedValue);
             int PaperQty = Convert.ToInt32(Request.Form["paperQty"]);
             int PrintQty = Convert.ToInt32(Request.Form["printQty"]);
             string DigitalRemarks = Request.Form["DIgitalRemarks"];
 
-            int i = _adminfacade.SaveDigitalJobDetails(ClientID, MachineID, PaperQty, PrintQty, DigitalRemarks);
+            int i = _adminfacade.SaveDigitalJobDetails(ClientID, MachineID,PaperID, PaperQty, PrintQty, DigitalRemarks);
 
             if(i>0)
             {
-                Page.ClientScript.RegisterStartupScript(this.GetType(), "toastr_message", "toastr.info('Data Saved Successfully', 'Success')", true);
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "toastr_message", "toastr.success('Data Saved Successfully', 'Success','plain')", true);
             }
 
         }

@@ -17,6 +17,7 @@ CREATE PROCEDURE [dbo].[stp_SaveDigitalJobCard]
 	@JobCardID INT=0,
 	@ClientID INT=0,
 	@PrinterID INT=0,
+	@PaperID INT=1,
 	@PaperQuantity INT=0,
 	@PrintQuantity INT=0,
 	@DigitalRemarks NVARCHAR(MAX),	
@@ -35,6 +36,7 @@ SELECT @JobID=(SELECT JobCategory FROM Machine WHERE MachineID=@PrinterID);
 		INSERT INTO tbl_mst_JobCard
 		(FK_intClientID,
 		FK_IntPrinterID,
+		FK_intPaperID,
 		Paper_Quantity,
 		Print_Quantity,
 		JobDescription,
@@ -43,6 +45,7 @@ SELECT @JobID=(SELECT JobCategory FROM Machine WHERE MachineID=@PrinterID);
 		VALUES
 		(@ClientID,
 		@PrinterID,
+		@PaperID,
 		@PaperQuantity,
 		@PrintQuantity,
 		@DigitalRemarks,
