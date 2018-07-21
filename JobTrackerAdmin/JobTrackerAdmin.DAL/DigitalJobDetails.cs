@@ -50,5 +50,25 @@ namespace JobTrackerAdmin.DAL
 
             return i;
         }
+
+        public DataTable GetDigitalJobDetailsByID(string id)
+        {
+            DataTable dt = new DataTable();
+
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["connect"].ToString());
+            con.Open();
+            SqlDataAdapter da = new SqlDataAdapter();
+            SqlCommand cmd = new SqlCommand("stp_GetDigitalJobDetailsByID", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@JobCardID ", SqlDbType.Int).Value = Convert.ToInt32(id);
+
+
+            //cmd.Parameters.Add("@MenuTag", SqlDbType.BigInt).Value = 0;
+
+            da.SelectCommand = cmd;
+            da.Fill(dt);
+            con.Close();
+            return dt;
+        }
     }
 }

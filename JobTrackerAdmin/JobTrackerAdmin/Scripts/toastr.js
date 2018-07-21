@@ -167,7 +167,6 @@
                     hideDuration: 1000,
                     hideEasing: 'swing',
                     onHidden: undefined,
-                    showHideTransition:'slide',
 
                     extendedTimeOut: 1000,
                     iconClasses: {
@@ -177,15 +176,17 @@
                         warning: 'toast-warning'
                     },
                     iconClass: 'toast-info',
-                    positionClass: 'toast-top-right',
+                    positionClass: 'toast-top-center',
                     timeOut: 5000, // Set timeOut and extendedTimeOut to 0 to make it sticky
                     titleClass: 'toast-title',
                     messageClass: 'toast-message',
+                    showHideTransition: 'slide',
+
                     target: 'body',
                     closeHtml: '<button type="button">&times;</button>',
                     newestOnTop: true,
                     preventDuplicates: false,
-                    progressBar: false
+                    progressBar: true
                 };
             }
 

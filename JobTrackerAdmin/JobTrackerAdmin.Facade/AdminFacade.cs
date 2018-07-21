@@ -87,6 +87,11 @@ namespace JobTrackerAdmin.Facade
             return digitaldetails.GetAllDigitalJobDetails();
         }
 
+        public DataTable GetDigitalJobDetailsByID(string id)
+        {
+            return digitaldetails.GetDigitalJobDetailsByID(id);
+        }
+
         public int SaveDigitalJobDetails(int ClientID, int MachineID, int PaperID, int PaperQty, int PrintQty, string Remarks)
         {
             return digitaldetails.SaveDigitalJobDetails(ClientID, MachineID, PaperID, PaperQty, PrintQty, Remarks);

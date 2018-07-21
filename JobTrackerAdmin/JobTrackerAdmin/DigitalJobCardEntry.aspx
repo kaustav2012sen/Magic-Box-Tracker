@@ -20,7 +20,7 @@
             </div>
             <div class="form-group">
                 <label for="jobCardNo">Job Card No.</label>
-                <input type="text" class="form-control" id="jobCardNo" placeholder="Job Card No.">
+                <input type="text" class="form-control" id="jobCardNo" placeholder="Job Card No." value="<%=JobCardID %>">
                 </div>
           <div class="form-group">
                 <label for="clinetName">Client Name</label>
@@ -50,15 +50,15 @@
                 </div>
                     <div class="form-group">
                 <label for="paperQty">Paper Qty</label>
-                <input type="number" class="form-control" id="paperQty" placeholder="Paper Qty" name="paperQty">
+                <input type="number" class="form-control" id="paperQty" placeholder="Paper Qty" name="paperQty" value="<%=PaperQty %>">
                 </div>
                     <div class="form-group">
                 <label for="printQty">Print Qty</label>
-                <input type="text" class="form-control" id="printQty" placeholder="Print Qty" name="printQty">
+                <input type="text" class="form-control" id="printQty" placeholder="Print Qty" name="printQty" value="<%=PrintQty %>">
                 </div>
           <div class="form-group">
                 <label for="remark">Remark</label>
-               <textarea class="form-control" rows="5" name="DigitalRemarks"></textarea>
+               <textarea class="form-control" rows="5" name="DigitalRemarks" value="<%=Remarks %>"></textarea>
                 </div>
 
            <%--<button type="button" class="btn btn-primary">Save</button>--%>

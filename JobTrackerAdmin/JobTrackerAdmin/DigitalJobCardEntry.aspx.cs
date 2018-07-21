@@ -15,11 +15,31 @@ namespace JobTrackerAdmin
         AdminFacade _adminfacade = new AdminFacade();
         StringBuilder htmlTable = new StringBuilder();
 
-
+        string id = string.Empty;
+        public string JobCardID = string.Empty;
+        public string PaperQty = string.Empty;
+        public string PrintQty = string.Empty;
+        public string Remarks = string.Empty;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            id = Request.QueryString["id"];
+            DataTable dt = new DataTable();
+
+            if (Convert.ToInt32(id) > 0)
+            {
+                dt = _adminfacade.GetDigitalJobDetailsByID(id);
+                BindAllDropdown();
+                ddlClient.SelectedValue = dt.Rows[0]["ClientID"].ToString();
+                ddlPrinter.SelectedValue = dt.Rows[0]["PrinterID"].ToString();
+                ddlPaper.SelectedValue = dt.Rows[0]["PaperID"].ToString();
+                JobCardID = dt.Rows[0]["PK_intJobCardID"].ToString();
+                PaperQty = dt.Rows[0]["Paper_Quantity"].ToString();
+                PrintQty = dt.Rows[0]["Print_Quantity"].ToString();
+                Remarks = dt.Rows[0]["JobDescription"].ToString();
+
+            }
+            if (!IsPostBack)
             {
                 BindAllDropdown();
             }
@@ -93,6 +113,7 @@ namespace JobTrackerAdmin
             if(i>0)
             {
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "toastr_message", "toastr.success('Data Saved Successfully', 'Success','plain')", true);
+                BindAllDropdown();
             }
 
         }
