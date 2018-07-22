@@ -55,6 +55,21 @@ SELECT @JobID=(SELECT JobCategory FROM Machine WHERE MachineID=@PrinterID);
 	SET @Status=SCOPE_IDENTITY();
 
 	END
+	ELSE
+	BEGIN
+		UPDATE tbl_mst_JobCard SET
+		FK_intClientID=@ClientID,
+		FK_IntPrinterID=@PrinterID,
+		FK_intPaperID=@PaperID,
+		Paper_Quantity=@PaperQuantity,
+		Print_Quantity=@PrintQuantity,
+		JobDescription=@DigitalRemarks,
+		dt_Created=GETUTCDATE(),
+		FK_intJobID=@JobID
+		WHERE PK_intJobCardID=@JobCardID
+
+		SET @Status=-3;
+	END
 
 
 END

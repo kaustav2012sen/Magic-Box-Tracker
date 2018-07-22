@@ -96,6 +96,10 @@ namespace JobTrackerAdmin.Facade
         {
             return digitaldetails.SaveDigitalJobDetails(ClientID, MachineID, PaperID, PaperQty, PrintQty, Remarks);
         }
+        public int SaveDigitalJobDetails(string JobCardID,int ClientID, int MachineID, int PaperID, int PaperQty, int PrintQty, string Remarks)
+        {
+            return digitaldetails.SaveDigitalJobDetails(JobCardID,ClientID, MachineID, PaperID, PaperQty, PrintQty, Remarks);
+        }
         #endregion
 
         #region Job

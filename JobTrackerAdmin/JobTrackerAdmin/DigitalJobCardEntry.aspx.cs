@@ -36,7 +36,7 @@ namespace JobTrackerAdmin
                 JobCardID = dt.Rows[0]["PK_intJobCardID"].ToString();
                 PaperQty = dt.Rows[0]["Paper_Quantity"].ToString();
                 PrintQty = dt.Rows[0]["Print_Quantity"].ToString();
-                Remarks = dt.Rows[0]["JobDescription"].ToString();
+                JobDescription.Text = dt.Rows[0]["JobDescription"].ToString();
 
             }
             if (!IsPostBack)
@@ -51,7 +51,10 @@ namespace JobTrackerAdmin
 
             ds = _adminfacade.GetAllDigitalJobDetails();
             BindDropDown(ds);
-            ViewDigitalJobDetails(ds);
+            if (String.IsNullOrEmpty(id))
+            {
+                ViewDigitalJobDetails(ds);
+            }
         }
 
         private void BindDropDown(DataSet ds)
@@ -106,14 +109,29 @@ namespace JobTrackerAdmin
             int PaperID = Convert.ToInt32(ddlPaper.SelectedValue);
             int PaperQty = Convert.ToInt32(Request.Form["paperQty"]);
             int PrintQty = Convert.ToInt32(Request.Form["printQty"]);
-            string DigitalRemarks = Request.Form["DIgitalRemarks"];
+            string DigitalRemarks = JobDescription.Text;
+            int i=0;
 
-            int i = _adminfacade.SaveDigitalJobDetails(ClientID, MachineID,PaperID, PaperQty, PrintQty, DigitalRemarks);
+            if (String.IsNullOrEmpty(id))
+            {
+                 i = _adminfacade.SaveDigitalJobDetails(ClientID, MachineID, PaperID, PaperQty, PrintQty, DigitalRemarks);
 
-            if(i>0)
+            }
+            else
+            {
+                 i=_adminfacade.SaveDigitalJobDetails(id,ClientID, MachineID, PaperID, PaperQty, PrintQty, DigitalRemarks);
+            }
+
+
+            if (i>0)
             {
                 Page.ClientScript.RegisterStartupScript(this.GetType(), "toastr_message", "toastr.success('Data Saved Successfully', 'Success','plain')", true);
                 BindAllDropdown();
+            }
+            else if(i==-3)
+            {
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "toastr_message", "toastr.success('Data Updated Successfully', 'Success','plain')", true);
+                Response.Redirect("DigitalJobCardEntry.aspx");
             }
 
         }

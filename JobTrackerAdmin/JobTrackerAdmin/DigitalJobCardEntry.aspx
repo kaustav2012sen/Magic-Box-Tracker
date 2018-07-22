@@ -20,7 +20,7 @@
             </div>
             <div class="form-group">
                 <label for="jobCardNo">Job Card No.</label>
-                <input type="text" class="form-control" id="jobCardNo" placeholder="Job Card No." value="<%=JobCardID %>">
+                <input type="text" class="form-control" id="jobCardNo" placeholder="Job Card No." value="<%=JobCardID %>" readonly>
                 </div>
           <div class="form-group">
                 <label for="clinetName">Client Name</label>
@@ -58,7 +58,8 @@
                 </div>
           <div class="form-group">
                 <label for="remark">Remark</label>
-               <textarea class="form-control" rows="5" name="DigitalRemarks" value="<%=Remarks %>"></textarea>
+              <asp:TextBox ID="JobDescription" runat="server" TextMode="MultiLine" CssClass="form-control" BackColor="#e1e1e1"></asp:TextBox>
+               <%--<textarea class="form-control" rows="5" name="DigitalRemarks" value="<%=Remarks %>"></textarea>--%>
                 </div>
 
            <%--<button type="button" class="btn btn-primary">Save</button>--%>
