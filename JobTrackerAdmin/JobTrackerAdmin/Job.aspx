@@ -12,37 +12,21 @@
                             
                 <thead>
                 <tr>
+                  <th class="auto-style1">Job ID</th>
                   <th class="auto-style1">Job Description</th>
-                  <th class="auto-style1">Nested Description</th>
-                  <%--<th>Dummy</th>--%>
+                  <th class="auto-style1">Master Job</th>
+                   <th class="auto-style1">Job Remarks</th>
                 </tr>
                 </thead>
                 <tbody>
-                 <%-- <asp:PlaceHolder ID="DbDataPlaceholder" runat="server"></asp:PlaceHolder>--%>
+                  <asp:PlaceHolder ID="DbDataPlaceholder" runat="server"></asp:PlaceHolder>
                    
-                 <%--<asp:DropDownList ID="DropDownList1" runat="server" AppendDataBoundItems="true"
-                       DataTextField="Master Job" DataValueField="0"></asp:DropDownList>--%>
                 </tbody>
                 <tfoot>
-                <%--<tr>
-                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <%--<th>CSS grade</th>
-                </tr>--%>
                 </tfoot>
               </table>
          </div>
-                 	<div class="panel-footer">									
-                                            <button type="button" class="btn btn-primary btn-xs">First Page</button>
-                                            <button type="button" class="btn btn-primary btn-xs"><< 10 Records</button>
-                                            <button type="button" class="btn btn-primary btn-xs">10 Records >></button>
-                                            <button type="button" class="btn btn-primary btn-xs">Last Page</button>
-                                            <button type="button" class="btn btn-primary btn-xs">Export To Excel</button>
-										</div>
-
-             </div>
+            </div>
          </div>
 
              <div class="col-lg-6">
@@ -50,26 +34,27 @@
             <div class="panel-heading">Job Name Entry</div>
             <div class =" panel-body">      
             <div class="form-group">
-            <label for="jobDate">Job Description</label>
-            <input type="text" class="form-control" id="jobDate" placeholder="Job Description">
+            <label for="jobDescription">Job Description</label>
+               <input type="text" class="form-control" placeholder="Job Description" name="JobDescription" value="<% =JobDescription %>">
             </div>
            
-          <div class="form-group">
+            <div class="form-group">
                 <label for="clinetName">Nested Description</label>
-                <%--<input type="text" class="form-control" id="clientName" placeholder="Client Name">--%>
-              <asp:DropDownList ID="ddlNestedDescription" runat="server" CssClass="form-control" AutoPostBack="false"></asp:DropDownList>
-                </div>
-          <div class="form-group">
+                  <asp:DropDownList ID="ddlNestedDescription" runat="server" CssClass="form-control" AutoPostBack="false">
+                  <asp:ListItem Selected="True" Value="0" Text="Select Master Job"></asp:ListItem>
+                  </asp:DropDownList>
+            </div>
+            <div class="form-group">
                 <label for="remark">Remark</label>
-               <textarea class="form-control" rows="5"></textarea>
+                <input type="text" class="form-control" placeholder="Job Remarks" name="JobRemarks" value="<% =JobRemarks %>">
+                <%--<asp:TextBox ID="JobDescription" runat="server" TextMode="MultiLine" CssClass="form-control" BackColor="#e1e1e1"></asp:TextBox>--%>
                 </div>
-
-           <button type="button" class="btn btn-primary">Save</button>
+                <asp:Button ID="btn_Save" runat="server" Text="Save" CssClass="btn btn-primary" OnClick="btn_Save_Click" />
 				<button type="button" class="btn btn-info">Reset</button>
                 
-          </div>
+            </div>
 </div>
-             </div>
+</div>
 
 
 

@@ -54,6 +54,7 @@ namespace JobTrackerAdmin.DAL
             cmd.Parameters.Add("@Attr_Integer1", SqlDbType.BigInt).Value = oInstance.Attr_Integer1;
             cmd.Parameters.Add("@Attr_NVarchar1", SqlDbType.VarChar).Value = oInstance.Attr_NVarchar1;
             cmd.Parameters.Add("@Attr_Integer2", SqlDbType.VarChar).Value = oInstance.Attr_Integer2;
+            cmd.Parameters.Add("@Attr_NVarchar2", SqlDbType.VarChar).Value = oInstance.Attr_NVarchar2;
             cmd.Parameters.Add("@ActionTag", SqlDbType.Int).Value = (oInstance.Attr_Integer1 > 0) ? 1 : 0;
             cmd.Parameters.Add("@MenuTag", SqlDbType.BigInt).Value = 5;
 

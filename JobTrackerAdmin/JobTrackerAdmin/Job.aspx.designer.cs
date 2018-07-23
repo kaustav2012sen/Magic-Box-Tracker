@@ -13,6 +13,15 @@ namespace JobTrackerAdmin {
     public partial class WebForm14 {
         
         /// <summary>
+        /// DbDataPlaceholder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder DbDataPlaceholder;
+        
+        /// <summary>
         /// ddlNestedDescription control.
         /// </summary>
         /// <remarks>
@@ -20,5 +29,14 @@ namespace JobTrackerAdmin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlNestedDescription;
+        
+        /// <summary>
+        /// btn_Save control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btn_Save;
     }
 }
